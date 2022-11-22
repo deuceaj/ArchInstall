@@ -1,0 +1,17 @@
+$HOME/.local/bin/led.sh &
+$HOME/.local/bin/javafix &
+$HOME/.config/bspwm/polybar/launch.sh &
+numlockx on &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+nitrogen --restore &
+corectrl &
+sxhkd -c "$HOME/.config/bspwm/sxhkdrc" &
+picom &
+pcloud &
+
+exec bspwm
+
+
+
+
+

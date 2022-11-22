@@ -1,0 +1,19 @@
+
+corectrl &
+$HOME/.local/bin/led.sh &
+$HOME/.local/bin/javafix &
+polybar -q  mainbar-bspwm -c "$HOME/.config/polybar/config" &
+polybar -q  mainbar-bspwm-extra -c "$HOME/.config/polybar/config" &
+sxhkd &
+numlockx on &
+/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+nitrogen --restore &
+picom --config $HOME/.config/picom.conf &
+pcloud &
+
+exec bspwm
+
+
+
+
+

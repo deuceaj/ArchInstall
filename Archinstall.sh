@@ -1,0 +1,371 @@
+#!/usr/bin/env bash
+
+echo -ne "
+-------------------------------------------------------------------------
+
+██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     ██╗███╗   ██╗ ██████╗        
+██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     ██║████╗  ██║██╔════╝        
+██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     ██║██╔██╗ ██║██║  ███╗       
+██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     ██║██║╚██╗██║██║   ██║       
+██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗██║██║ ╚████║╚██████╔╝       
+╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝        
+                                                                                   
+ █████╗ ██████╗  ██████╗██╗  ██╗████████╗██╗    ██╗███████╗███████╗██╗  ██╗███████╗
+██╔══██╗██╔══██╗██╔════╝██║  ██║╚══██╔══╝██║    ██║██╔════╝██╔════╝██║ ██╔╝██╔════╝
+███████║██████╔╝██║     ███████║   ██║   ██║ █╗ ██║█████╗  █████╗  █████╔╝ ███████╗
+██╔══██║██╔══██╗██║     ██╔══██║   ██║   ██║███╗██║██╔══╝  ██╔══╝  ██╔═██╗ ╚════██║
+██║  ██║██║  ██║╚██████╗██║  ██║   ██║   ╚███╔███╔╝███████╗███████╗██║  ██╗███████║
+╚═╝  ╚═╝╚═╝  ╚═╝ ╚═════╝╚═╝  ╚═╝   ╚═╝    ╚══╝╚══╝ ╚══════╝╚══════╝╚═╝  ╚═╝╚══════╝
+
+-------------------------------------------------------------------------
+"
+  sleep 2                                                                               
+mkdir ~/GitHub
+
+cd ~/GitHub
+git clone https://github.com/arcolinux/arcolinux-spices
+cd ~/GitHub/arcolinux-spices/usr/share/arcolinux-spices/scripts/
+./get-the-keys-and-repos.sh
+sudo pacman -Sy
+
+echo -ne "
+-------------------------------------------------------------------------
+██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     ██╗███╗   ██╗ ██████╗         
+██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     ██║████╗  ██║██╔════╝         
+██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     ██║██╔██╗ ██║██║  ███╗        
+██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     ██║██║╚██╗██║██║   ██║        
+██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗██║██║ ╚████║╚██████╔╝        
+╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝         
+                                                                                    
+██████╗  █████╗  ██████╗███╗   ███╗ █████╗ ███╗   ██╗      ██████╗ ██╗  ██╗ ██████╗ 
+██╔══██╗██╔══██╗██╔════╝████╗ ████║██╔══██╗████╗  ██║      ██╔══██╗██║ ██╔╝██╔════╝ 
+██████╔╝███████║██║     ██╔████╔██║███████║██╔██╗ ██║█████╗██████╔╝█████╔╝ ██║  ███╗
+██╔═══╝ ██╔══██║██║     ██║╚██╔╝██║██╔══██║██║╚██╗██║╚════╝██╔═══╝ ██╔═██╗ ██║   ██║
+██║     ██║  ██║╚██████╗██║ ╚═╝ ██║██║  ██║██║ ╚████║      ██║     ██║  ██╗╚██████╔╝
+╚═╝     ╚═╝  ╚═╝ ╚═════╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝      ╚═╝     ╚═╝  ╚═╝ ╚═════╝ 
+
+-------------------------------------------------------------------------
+"
+sleep 2
+func_install() {
+	if pacman -Qi $1 &> /dev/null; then
+		tput setaf 2
+  		echo "###############################################################################"
+  		echo "################## The package "$1" is already installed"
+      	echo "###############################################################################"
+      	echo
+		tput sgr0
+	else
+    	tput setaf 3
+    	echo "###############################################################################"
+    	echo "##################  Installing package "  $1
+    	echo "###############################################################################"
+    	echo
+    	tput sgr0
+    	sudo pacman -S --noconfirm --needed $1
+    fi
+}
+
+func_category() {
+	tput setaf 5;
+	echo "################################################################"
+	echo "Installing software for category " $1
+	echo "################################################################"
+	echo;tput sgr0
+}
+
+###############################################################################
+
+func_category Test
+
+list=(
+sx
+alacritty
+archlinux-logout-git
+base-developer
+bspwm
+btop
+btrfs-progs
+corectrl
+dunst
+discord
+firefox-developer-edition
+flameshots
+git
+gpick
+grub-customizer
+gtop
+libxinerama
+linux-headers
+lxdm-gtk3
+neovim
+neofetch
+nitrogen
+openssh
+partitionmanager
+polkit-gnome
+polybar
+rofi
+sxhkd
+unzip
+visual-studio-code-bin
+xdo
+xdg-utils
+xf86-video-amdgpu
+xfce4-power-manager
+xorg-server
+xorg-xinit
+yay-bin
+zsh
+zsh-autosuggestions
+
+###############
+#### Sound ####
+###############
+alsa-plugins
+alsa-tools
+alsa-utils
+pamixer
+pavucontrol
+portaudio
+pipewire
+wireplumber
+pipewire-alsa
+pipewire-jack
+pipewire-zeroconf
+pipewire-pulse
+gstreamer
+gst-plugins-good
+gst-plugins-bad
+gst-plugins-base
+gst-plugins-ugly
+playerctl
+volumeicon
+
+###############
+#### Files ####
+###############
+baobab
+gvfs
+gvfs-smb
+gvfs-nfs
+ncdu
+ntfs-3g
+ranger
+ueberzug
+xdg-user-dirs
+
+################
+#### Images ####
+################
+imagemagick
+viewnior
+
+####################
+#### Multimedia ####
+####################
+ffmpeg
+ffmpegthumbnailer
+mpv
+obs-studio
+thunar-archive-plugin
+thunar-volman
+thunar-media-tags-plugin
+tumbler
+youtube-dl
+
+
+####################
+#### ARCHIVE    ####
+####################
+file-roller
+gzip
+p7zip
+sharutils
+ufw
+unrar
+unzip
+
+
+####################
+#### Gaming     ####
+####################
+steam
+proton-ge-custom-bin 
+lib32-vulkan-radeon
+
+
+####################
+#### Utilities  ####
+####################
+balena-etcher
+glow
+grub-btrfs
+grub-customizer
+krdc
+ninja
+libvncserver
+okular
+obsidian
+partitionmanager
+
+
+####################
+#### Utilities  ####
+####################
+bridge-utils
+dmidecode
+dnsmasq
+edk2-ovmf
+iptables-nft
+libguestfs
+libvirt
+qemu-desktop
+qemu-full
+swtpm
+vde2
+virt-manager
+virt-viewer
+
+ 
+)
+
+count=0
+for name in "${list[@]}" ; do
+	count=$[count+1]
+	tput setaf 3;echo "Installing package nr.  "$count " " $name;tput sgr0;
+	func_install $name
+done
+
+###############################################################################
+
+
+echo -ne "
+-------------------------------------------------------------------------
+██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     ██╗███╗   ██╗ ██████╗ 
+██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║     ██║████╗  ██║██╔════╝ 
+██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║     ██║██╔██╗ ██║██║  ███╗
+██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║     ██║██║╚██╗██║██║   ██║
+██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗██║██║ ╚████║╚██████╔╝
+╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝╚═╝╚═╝  ╚═══╝ ╚═════╝ 
+                                                                            
+ █████╗ ██╗   ██╗██████╗       ██████╗ ██╗  ██╗ ██████╗                     
+██╔══██╗██║   ██║██╔══██╗      ██╔══██╗██║ ██╔╝██╔════╝                     
+███████║██║   ██║██████╔╝█████╗██████╔╝█████╔╝ ██║  ███╗                    
+██╔══██║██║   ██║██╔══██╗╚════╝██╔═══╝ ██╔═██╗ ██║   ██║                    
+██║  ██║╚██████╔╝██║  ██║      ██║     ██║  ██╗╚██████╔╝                    
+╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝      ╚═╝     ╚═╝  ╚═╝ ╚═════╝                     
+                                                                            
+-------------------------------------------------------------------------
+"
+sleep 2
+
+func_install() {
+	if pacman -Qi $1 &> /dev/null; then
+		tput setaf 2
+  		echo "###############################################################################"
+  		echo "################## The package "$1" is already installed"
+      	echo "###############################################################################"
+      	echo
+		tput sgr0
+	else
+    	tput setaf 3
+    	echo "###############################################################################"
+    	echo "##################  Installing package "  $1
+    	echo "###############################################################################"
+    	echo
+    	tput sgr0
+    	yay -S --noconfirm --needed $1
+    fi
+}
+
+func_category() {
+	tput setaf 5;
+	echo "################################################################"
+	echo "Installing software for category " $1
+	echo "################################################################"
+	echo;tput sgr0
+}
+
+###############################################################################
+
+func_category AUR  
+
+list=(
+archlinux-tweak-tool-git 
+bsp-layout
+cava
+devour
+github-desktop-bin
+glow
+input-remapper-git
+ocs-url
+openrazer-meta
+pamac-aur
+pcloud-drive
+picom-animations-git
+spicetify-cli
+spotify
+spotifywm-git
+stalonetray
+tauon-music-box
+timeshift
+timeshift-autosnap
+tiny-media-manager-3
+ttf-ms-fonts
+xdg-ninja 
+xqp
+zscroll-git
+# exo-devel 
+# libxfce4util-devel 
+# libxfce4ui-devel 
+# thunar-git
+)
+
+count=0
+for name in "${list[@]}" ; do
+	count=$[count+1]
+	tput setaf 3;echo "Installing package nr.  "$count " " $name;tput sgr0;
+	func_install $name
+done
+
+##########
+
+
+# echo -ne "
+# -------------------------------------------------------------------------
+# ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗         
+# ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║         
+# ██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║         
+# ██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║         
+# ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗    
+# ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝    
+                                                          
+#  ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ ███████╗   
+# ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ ██╔════╝   
+# ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗███████╗   
+# ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║╚════██║   
+# ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝███████║   
+#  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ ╚══════╝   
+                                                                                                                                       
+# -------------------------------------------------------------------------
+# "
+
+# sleep 2
+
+# if [[ ! -e ~/.config2 ]]; then
+#     mkdir ~/.config2
+# elif [[ ! -d ~/.config2 ]]; then
+#     echo ".config22 already exists but is not a directory" 1>&2
+# fi
+
+# if [[ ! -e ~/.local22 ]]; then
+#     mkdir ~/.local22
+# elif [[ ! -d ~/.local22 ]]; then
+#     echo ".local22 already exists but is not a directory" 1>&2
+# fi
+
+
+
+# cp -r ~/GitHub/ArchInstall/config/* ~/.config22
+# cp -r ~/GitHub/ArchInstall/local/* ~/.local22

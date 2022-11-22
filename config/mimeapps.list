@@ -1,0 +1,17 @@
+[Added Associations]
+application/x-shellscript=visual-studio-code.desktop;
+inode/directory=visual-studio-code.desktop;
+text/plain=visual-studio-code.desktop;
+image/png=viewnior.desktop;
+image/jpeg=org.gnome.gThumb.desktop;viewnior.desktop;
+image/gif=viewnior.desktop;
+image/svg+xml=viewnior.desktop;
+text/plain=visual-studio-code.desktop;
+inode/directory=visual-studio-code.desktop;
+application/octet-stream=visual-studio-code.desktop;
+
+[Default Applications]
+image/gif=viewnior.desktop
+image/svg+xml=viewnior.desktop
+x-scheme-handler/etcher=balena-etcher.desktop
+application/octet-stream=visual-studio-code.desktop

@@ -1,0 +1,283 @@
+# Launch Applications
+super + {e, b,c,d,s,v,Return}
+    {thunar,firefox-developer-edition,code,discord,spotify,pavucontrol,alacritty}
+
+super + shift {c,e}
+    {alacritty -e lvim, xfce4-terminal -e ranger}
+
+# super + shift {c,e}
+#     {xfce4-terminal -e lvim,alacritty -e ranger}
+
+# Right click menu
+~button4
+  xqp 0 $(xdo id -N Bspwm -n root) && jgmenu_run 
+
+#############################################
+# Rofi Commands
+#############################################
+
+#rofi drun
+alt + space
+    ~/.local/bin/rofi_run -d
+
+#rofi ssh
+ctrl + space
+    ~/.local/bin/rofi_run -s
+
+#rofi ssh
+# super + space
+#     ~/.local/bin/rofi_run -w
+
+ctrl + super + l
+    /home/deuce/.config/rofi/applets/applets/quicklinks.sh
+
+ctrl + super + e
+    /home/deuce/.config/rofi/applets/applets/edit_config.sh
+
+
+
+#############################################
+# Close/Restart 
+#############################################
+
+#archlinux-logout
+super + x
+    archlinux-logout
+
+# make sxhkd reload its configuration files:
+super + shift + r
+    pkill -USR1 -x sxhkd
+
+
+# close and kill
+super + {_,shift + }q
+    bspc node -{c,k}
+
+# reset BSPWM
+ctrl + shift + r
+	~/.config/bspwm/bspwmrc
+
+
+#############################################
+# Run Programs
+#############################################
+
+#Htop
+super + h
+    alacritty 'btop task manager' -e btop
+
+
+# #Guild Wars
+# super + g 
+#     LUTRIS_SKIP_INIT=1 lutris lutris:rungameid/1
+
+#Guild Wars
+super + g 
+    steam steam://rungameid/1284210
+
+#Keyboard LED 
+super + Pause
+  /home/deuce/.local/bin/led.sh
+
+
+#Picom Toggle
+ctrl + alt + o
+    ~/.config/bspwm/scripts/picom-toggle.sh
+
+
+#archlinux-logout
+ctrl + alt + x
+    archlinux-logout
+
+ctrl + alt + l
+    archlinux-logout
+
+
+
+
+#################################################################
+#     MULTIMEDIA KEYS
+#################################################################
+
+#Raises volume
+XF86AudioRaiseVolume
+    amixer set Master 10%+
+
+#Lowers volume
+XF86AudioLowerVolume
+    amixer set Master 10%-
+
+#Mute
+XF86AudioMute
+    amixer -D pulse set Master 1+ toggle
+
+
+
+#PLAY
+XF86AudioPlay
+    playerctl play-pause
+
+#Next
+XF86AudioNext
+    playerctl next
+
+#previous
+XF86AudioPrev
+    playerctl previous
+
+#Stop
+XF86AudioStop
+    playerctl stop
+
+#Brightness up
+XF86MonBrightnessUp
+    xbacklight -inc 10
+
+#Brightness down
+XF86MonBrightnessDown
+    xbacklight -dec 10
+
+
+# Focused desktop window gap
+super + button{4,5}
+  bspc config -d focused window_gap $((`bspc config -d focused window_gap` {-,+} 2 ))
+
+
+
+#################################################################
+#     BSPWM WINDOWS
+#################################################################
+
+# set the window state
+super + space
+	bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+#Focus selected desktop FOR QWERTY KEYBOARDS
+super + {1-9,0}
+	bspc desktop -f '^{1-9,10}'
+# focus or send to the given desktop
+super + shift + {1-9,0}
+    id=$(bspc query -N -n); bspc node -d ^{1-9,10}; bspc node -f ${id}}
+
+
+#####################################
+## Move Windows between active Screen
+
+# Focus/swap windows by direction
+super + {_,shift + }{h,j,k,l}
+    bspc node --{focus,swap} {west,south,north,east}
+
+
+# # Move focused window to other monitor
+super + shift + {Left,Down,Up,Right}
+    bspc node -m next --follow {west,south,north,east}
+
+# Flip layout vertically/horizontally
+super + {_,shift + }a
+     bspc node @/ --flip {vertical,horizontal}
+
+# alternate between the tiled and monocle layout
+super + shift + m
+    bspc desktop -l next
+
+# swap the current node and the biggest node
+super + g
+    bspc node -s biggest
+
+
+#####################################
+## Set Windows state and flags
+
+# set the window state
+super + {t,shift + t,s,f}
+    bspc node -t {tiled,pseudo_tiled,floating,fullscreen}
+
+# set the node flags
+super + ctrl + {x,y,z}
+    bspc node -g {locked,sticky,private}
+
+
+#####################################
+## move a floating window
+super + {Left,Down,Up,Right}
+    bspc node -v {-20 0,0 20,0 -20,20 0}
+
+
+#####################################
+## Mouse floating:
+ 
+ 
+# Focus
+~button1
+	bspc pointer -g focus
+ 
+# Start move/resize
+alt + button{1-3}
+	; bspc pointer -g {move,resize_side,resize_corner}
+ 
+alt + !button{1-3}
+      bspc pointer -t %i, %i
+ 
+# End Move/Risize
+alt + @button{1-3}
+	bspc pointer -u
+
+
+
+# # if the current node is automatic, send it to the last manual, otherwise pull the last leaf
+# super + y
+#     bspc query -N -n focused.automatic && bspc node -n last.!automatic || bspc node last.leaf -n focused
+
+
+
+
+
+
+
+                # # focus the next/previous node in the current desktop
+                # super + {_,shift + }c
+                #     bspc node -f {next,prev}.local
+
+                # # focus the next/previous desktop in the current monitor
+                # super + bracket{left,right}
+                #     bspc desktop -f {prev,next}.local
+
+                # # focus the last node/desktop
+                # super + {grave,Tab}
+                #     bspc {node,desktop} -f last
+
+                # # focus the older or newer node in the focus history
+                # super + {o,i}
+                #     bspc wm -h off; \
+                #     bspc node {older,newer} -f; \
+                #     bspc wm -h on
+
+
+
+
+                # # preselect the direction
+                # super + ctrl + {h,j,k,l}
+                #     bspc node -p {west,south,north,east}
+
+                # # preselect the ratio
+                # super + ctrl + {1-9}
+                #     bspc node -o 0.{1-9}
+
+                # # cancel the preselection for the focused node
+                # super + ctrl + space
+                #     bspc node -p cancel
+
+                # # cancel the preselection for the focused desktop
+                # super + ctrl + shift + space
+                #     bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+
+
+
+                # # expand a window by moving one of its side outward
+                # super + alt + {h,j,k,l}
+                #     bspc node -z {left -20 0,bottom 0 20,top 0 -20,right 20 0}
+
+                # # contract a window by moving one of its side inward
+                # super + alt + shift + {h,j,k,l}
+                #     bspc node -z {right -20 0,top 0 20,bottom 0 -20,left 20 0}
+

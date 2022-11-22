@@ -1,0 +1,23 @@
+{
+    "folders": [
+        {
+            "path": "/home/deuce/.config/bspwm"
+        },
+        {
+            "path": "/home/deuce/.config/dunst"
+        },
+        {
+            "path": "/home/deuce/.config/jgmenu"
+        },
+        {
+            "path": "/home/deuce/.config/ranger"
+        },
+        {
+            "path": "/home/deuce/.config/rofi"
+        },
+        {
+            "path": "/home/deuce/.config/Thunar"
+        }
+    ],
+    "settings": {}
+}
