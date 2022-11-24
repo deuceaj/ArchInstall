@@ -53,85 +53,85 @@ sleep 3
 
 
 
-# echo -ne "
-# -------------------------------------------------------------------------
-# ██╗   ██╗██████╗ ██████╗  █████╗ ████████╗███████╗    
-# ██║   ██║██╔══██╗██╔══██╗██╔══██╗╚══██╔══╝██╔════╝    
-# ██║   ██║██████╔╝██║  ██║███████║   ██║   █████╗      
-# ██║   ██║██╔═══╝ ██║  ██║██╔══██║   ██║   ██╔══╝      
-# ╚██████╔╝██║     ██████╔╝██║  ██║   ██║   ███████╗    
-#  ╚═════╝ ╚═╝     ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝    
+echo -ne "
+-------------------------------------------------------------------------
+██╗   ██╗██████╗ ██████╗  █████╗ ████████╗███████╗    
+██║   ██║██╔══██╗██╔══██╗██╔══██╗╚══██╔══╝██╔════╝    
+██║   ██║██████╔╝██║  ██║███████║   ██║   █████╗      
+██║   ██║██╔═══╝ ██║  ██║██╔══██║   ██║   ██╔══╝      
+╚██████╔╝██║     ██████╔╝██║  ██║   ██║   ███████╗    
+ ╚═════╝ ╚═╝     ╚═════╝ ╚═╝  ╚═╝   ╚═╝   ╚══════╝    
                                                       
-# ██████╗  ██████╗ ██╗     ██╗  ██╗██╗████████╗         
-# ██╔══██╗██╔═══██╗██║     ██║ ██╔╝██║╚══██╔══╝         
-# ██████╔╝██║   ██║██║     █████╔╝ ██║   ██║            
-# ██╔═══╝ ██║   ██║██║     ██╔═██╗ ██║   ██║            
-# ██║     ╚██████╔╝███████╗██║  ██╗██║   ██║            
-# ╚═╝      ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝            
+██████╗  ██████╗ ██╗     ██╗  ██╗██╗████████╗         
+██╔══██╗██╔═══██╗██║     ██║ ██╔╝██║╚══██╔══╝         
+██████╔╝██║   ██║██║     █████╔╝ ██║   ██║            
+██╔═══╝ ██║   ██║██║     ██╔═██╗ ██║   ██║            
+██║     ╚██████╔╝███████╗██║  ██╗██║   ██║            
+╚═╝      ╚═════╝ ╚══════╝╚═╝  ╚═╝╚═╝   ╚═╝            
                                                                                                           
-# -------------------------------------------------------------------------
-# "
+-------------------------------------------------------------------------
+"
 
-# sleep 2
-
-
-# echo "--------------------------------------"
-# echo "-- No Passwd  Polkit          --"
-# echo "--------------------------------------"
-
-# touch /etc/polkit-1/rules.d/49-nopasswd_global.rules
-# cat <<EOT >> /* Allow members of the wheel group to execute any actions
-#  * without password authentication, similar to "sudo NOPASSWD:"
-#  */
-# polkit.addRule(function(action, subject) {
-#     if (subject.isInGroup("wheel")) {
-#         return polkit.Result.YES;
-#     }
-# });
-
-# EOT
-# cat /etc/polkit-1/rules.d/49-nopasswd_global.rules
-
-# echo "--------------------------------------"
-# echo "--No Passwd  Polkit enabled --"
-# echo "--------------------------------------"
+sleep 2
 
 
+echo "--------------------------------------"
+echo "-- No Passwd  Polkit          --"
+echo "--------------------------------------"
 
-# echo -ne "
-# -------------------------------------------------------------------------
-# ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗         
-# ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║         
-# ██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║         
-# ██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║         
-# ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗    
-# ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝    
+touch /etc/polkit-1/rules.d/49-nopasswd_global.rules
+cat <<EOT >> /* Allow members of the wheel group to execute any actions
+ * without password authentication, similar to "sudo NOPASSWD:"
+ */
+polkit.addRule(function(action, subject) {
+    if (subject.isInGroup("wheel")) {
+        return polkit.Result.YES;
+    }
+});
+
+EOT
+cat /etc/polkit-1/rules.d/49-nopasswd_global.rules
+
+echo "--------------------------------------"
+echo "--No Passwd  Polkit enabled --"
+echo "--------------------------------------"
+
+
+
+echo -ne "
+-------------------------------------------------------------------------
+██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗         
+██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║         
+██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║         
+██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║         
+██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗    
+╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝    
                                                           
-# ███████╗ ██████╗ ███╗   ██╗████████╗███████╗              
-# ██╔════╝██╔═══██╗████╗  ██║╚══██╔══╝██╔════╝              
-# █████╗  ██║   ██║██╔██╗ ██║   ██║   ███████╗              
-# ██╔══╝  ██║   ██║██║╚██╗██║   ██║   ╚════██║              
-# ██║     ╚██████╔╝██║ ╚████║   ██║   ███████║              
-# ╚═╝      ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚══════╝              
+███████╗ ██████╗ ███╗   ██╗████████╗███████╗              
+██╔════╝██╔═══██╗████╗  ██║╚══██╔══╝██╔════╝              
+█████╗  ██║   ██║██╔██╗ ██║   ██║   ███████╗              
+██╔══╝  ██║   ██║██║╚██╗██║   ██║   ╚════██║              
+██║     ╚██████╔╝██║ ╚████║   ██║   ███████║              
+╚═╝      ╚═════╝ ╚═╝  ╚═══╝   ╚═╝   ╚══════╝              
                                                                                                                           
-# -------------------------------------------------------------------------
-# "
+-------------------------------------------------------------------------
+"
 
-# sleep 2
+sleep 2
 
-# wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/FiraCode.zip
-# unzip FiraCode.zip -d /usr/share/fonts
-# wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/FiraMono.zip
-# unzip FiraMono.zip -d /usr/share/fonts
-# wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/Iosevka.zip
-# unzip Iosevka.zip -d /usr/share/fonts
-# wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/JetBrainsMono.zip
-# unzip JetBrainsMono.zip -d /usr/share/fonts
-# wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/Meslo.zip
-# unzip Meslo.zip -d /usr/share/fonts
-# fc-cache -vf
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/FiraCode.zip
+unzip FiraCode.zip -d /usr/share/fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/FiraMono.zip
+unzip FiraMono.zip -d /usr/share/fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/Iosevka.zip
+unzip Iosevka.zip -d /usr/share/fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/JetBrainsMono.zip
+unzip JetBrainsMono.zip -d /usr/share/fonts
+wget https://github.com/ryanoasis/nerd-fonts/releases/download/v2.2.2/Meslo.zip
+unzip Meslo.zip -d /usr/share/fonts
+fc-cache -vf
 
-# rm -R FiraCode.zip FiraMono.zip Iosevka.zip JetBrainsMono.zip Meslo.zip
+rm -R FiraCode.zip FiraMono.zip Iosevka.zip JetBrainsMono.zip Meslo.zip
 
 
 echo -ne "

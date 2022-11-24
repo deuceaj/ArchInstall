@@ -28,6 +28,7 @@ cd ~/GitHub/arcolinux-spices/usr/share/arcolinux-spices/scripts/
 ./get-the-keys-and-repos.sh
 sudo pacman -Sy
 
+cd ~/
 echo -ne "
 -------------------------------------------------------------------------
 ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗     ██╗███╗   ██╗ ██████╗         
@@ -90,7 +91,7 @@ corectrl
 dunst
 discord
 firefox-developer-edition
-flameshots
+flameshot
 git
 gpick
 grub-customizer
@@ -208,10 +209,10 @@ libvncserver
 okular
 obsidian
 partitionmanager
-
+wmname
 
 ####################
-#### Utilities  ####
+#### VirtMan    ####
 ####################
 bridge-utils
 dmidecode
@@ -311,7 +312,7 @@ stalonetray
 tauon-music-box
 timeshift
 timeshift-autosnap
-tiny-media-manager-3
+tiny-media-manager
 ttf-ms-fonts
 xdg-ninja 
 xqp
@@ -329,43 +330,43 @@ for name in "${list[@]}" ; do
 	func_install $name
 done
 
-##########
+#########
 
 
-# echo -ne "
-# -------------------------------------------------------------------------
-# ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗         
-# ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║         
-# ██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║         
-# ██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║         
-# ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗    
-# ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝    
+echo -ne "
+-------------------------------------------------------------------------
+██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗         
+██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║         
+██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║         
+██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║         
+██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗    
+╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝    
                                                           
-#  ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ ███████╗   
-# ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ ██╔════╝   
-# ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗███████╗   
-# ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║╚════██║   
-# ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝███████║   
-#  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ ╚══════╝   
+ ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ ███████╗   
+██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ ██╔════╝   
+██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗███████╗   
+██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║╚════██║   
+╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝███████║   
+ ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ ╚══════╝   
                                                                                                                                        
-# -------------------------------------------------------------------------
-# "
+-------------------------------------------------------------------------
+"
 
-# sleep 2
+sleep 2
 
-# if [[ ! -e ~/.config2 ]]; then
-#     mkdir ~/.config2
-# elif [[ ! -d ~/.config2 ]]; then
-#     echo ".config22 already exists but is not a directory" 1>&2
-# fi
+if [[ ! -e ~/.config ]]; then
+    mkdir ~/.config
+elif [[ ! -d ~/.config ]]; then
+    echo ".config already exists but is not a directory" 1>&2
+fi
 
-# if [[ ! -e ~/.local22 ]]; then
-#     mkdir ~/.local22
-# elif [[ ! -d ~/.local22 ]]; then
-#     echo ".local22 already exists but is not a directory" 1>&2
-# fi
+if [[ ! -e ~/.local ]]; then
+    mkdir ~/.local
+elif [[ ! -d ~/.local ]]; then
+    echo ".local already exists but is not a directory" 1>&2
+fi
 
 
 
-# cp -r ~/GitHub/ArchInstall/config/* ~/.config22
-# cp -r ~/GitHub/ArchInstall/local/* ~/.local22
+cp -r ~/GitHub/ArchInstall/config/* ~/.config
+cp -r ~/GitHub/ArchInstall/local/* ~/.local
