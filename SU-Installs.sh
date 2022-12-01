@@ -72,29 +72,39 @@ echo -ne "
 -------------------------------------------------------------------------
 "
 
-sleep 2
+ sleep 2
+
+cp -r ~/GitHub/ArchInstall/etc/* ~/etc
 
 
-echo "--------------------------------------"
-echo "-- No Passwd  Polkit          --"
-echo "--------------------------------------"
+# echo "--------------------------------------"
+# echo "-- No Passwd  Polkit          --"
+# echo "--------------------------------------"
 
-touch /etc/polkit-1/rules.d/49-nopasswd_global.rules
-cat <<EOT >> /* Allow members of the wheel group to execute any actions
- * without password authentication, similar to "sudo NOPASSWD:"
- */
-polkit.addRule(function(action, subject) {
-    if (subject.isInGroup("wheel")) {
-        return polkit.Result.YES;
-    }
-});
+# touch /etc/polkit-1/rules.d/49-nopasswd_global.rules
+# cat <<EOT >> /* Allow members of the wheel group to execute any actions
+#  * without password authentication, similar to "sudo NOPASSWD:"
+#  */
+# polkit.addRule(function(action, subject) {
+#     if (subject.isInGroup("wheel")) {
+#         return polkit.Result.YES;
+#     }
+# });
 
-EOT
+# EOT
 cat /etc/polkit-1/rules.d/49-nopasswd_global.rules
 
-echo "--------------------------------------"
-echo "--No Passwd  Polkit enabled --"
-echo "--------------------------------------"
+sleep 2
+
+cat /etc/zsh/zshenv
+
+sleep 2
+
+# echo "--------------------------------------"
+# echo "--No Passwd  Polkit enabled --"
+# echo "--------------------------------------"
+
+
 
 
 
