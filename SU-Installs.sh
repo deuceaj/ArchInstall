@@ -23,16 +23,13 @@ echo -ne "
 # echo $vUUID 
 
 cat <<EOT >> /etc/fstab
-Mount Normal Drives
-# UUID=5f798586-7213-4a44-a4c2-182ae44f93ca   /media/Delta            ext4    nofail                                                                                                                  0 0 
-UUID=98da9e11-6868-4f55-8fe0-c187e32d6da9   /media/Epsilon          btrfs   nofail                                                                                                                  0 0 
-#UUID=e0066179-5d49-4577-bf50-32074a27e4a6   /media/Gamma            btrfs   nofail                                                                                                                  0 0 
-UUID=18d22909-ca6a-4b06-999f-0ef2f30cd1db   /media/Omega            btrfs   nofail                                                                                                                  0 0 
-UUID=0637e9eb-7a3d-475d-ac23-6f1fc993734e   /media/Phi              btrfs   nofail                                                                                                                  0 0 
-UUID=6D5EA4011693192F                       /media/Gamma     ntfs    nofail                                                                                                                  0 0
 
-//192.168.2.10/Theta                        /media/Theta/           cifs    vers=2.0,credentials=/home/deuce/.local/.smbcredentials,iocharset=utf8,gid=1000,uid=1000,file_mode=0777,dir_mode=0777   0 0 
-//192.168.2.10/sigma/Delta/                 /media/Delta/           cifs    vers=2.0,credentials=/home/deuce/.local/.smbcredentials,iocharset=utf8,gid=1000,uid=1000,file_mode=0777,dir_mode=0777   0 0 
+#Mount Normal Drives
+
+UUID=bd7b8781-f98f-45e3-8e5e-fee3d9fd8bbd   /media/Epsilon   btrfs   nofail                                                                       0 0 
+UUID=b1121d57-4180-4ad1-af4f-158af3b18883   /media/Gamma     btrfs   nofail                                                                       0 0 
+//192.168.2.10/sigma/Delta/                 /media/Sigma     cifs    vers=2.0,credentials=/home/deuce/.local/.smbcredentials,iocharset=utf8,gid=1000,uid=1000,file_mode=0777,dir_mode=0777   0 0
+//192.168.2.10/Theta                        /media/Theta/    cifs    vers=2.0,credentials=/home/deuce/.local/.smbcredentials,iocharset=utf8,gid=1000,uid=1000,file_mode=0777,dir_mode=0777   0 0
 
 
 EOT
