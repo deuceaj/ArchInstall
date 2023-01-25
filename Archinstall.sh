@@ -99,6 +99,7 @@ gtop
 # libxinerama
 linux-headers
 # lxdm-gtk3
+nemo
 neovim
 neofetch
 nitrogen
