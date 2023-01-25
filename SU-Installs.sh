@@ -74,26 +74,26 @@ sleep 3
 # cp -r ~/GitHub/ArchInstall/etc/* ~/etc
 
 
-# # echo "--------------------------------------"
-# # echo "-- No Passwd  Polkit          --"
-# # echo "--------------------------------------"
+echo "--------------------------------------"
+echo "-- No Passwd  Polkit          --"
+echo "--------------------------------------"
 
-# # touch /etc/polkit-1/rules.d/49-nopasswd_global.rules
-# # cat <<EOT >> /* Allow members of the wheel group to execute any actions
-# #  * without password authentication, similar to "sudo NOPASSWD:"
-# #  */
-# # polkit.addRule(function(action, subject) {
-# #     if (subject.isInGroup("wheel")) {
-# #         return polkit.Result.YES;
-# #     }
-# # });
+touch /etc/polkit-1/rules.d/49-nopasswd_global.rules
+cat <<EOT >> /* Allow members of the wheel group to execute any actions
+ * without password authentication, similar to "sudo NOPASSWD:"
+ */
+polkit.addRule(function(action, subject) {
+    if (subject.isInGroup("wheel")) {
+        return polkit.Result.YES;
+    }
+});
 
-# # EOT
-# cat /etc/polkit-1/rules.d/49-nopasswd_global.rules
+EOT
+cat /etc/polkit-1/rules.d/49-nopasswd_global.rules
 
 # sleep 2
 
-# cat /etc/zsh/zshenv
+ cat /etc/zsh/zshenv
 
 # sleep 2
 
@@ -184,8 +184,6 @@ sleep 3
 #     sudo virsh net-start default
 #     sleep 2
 #     sudo virsh net-autostart default
-#     sleep 2
-#     sudo virsh net-list --all
 #     sleep 2
 
 #      echo -ne "

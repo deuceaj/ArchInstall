@@ -19,13 +19,13 @@ echo -ne "
 
 -------------------------------------------------------------------------
 "
-  sleep 2                                                                               
+sleep 2                                                                               
 mkdir ~/GitHub
 
 cd ~/GitHub
 git clone https://github.com/arcolinux/arcolinux-spices
 cd ~/GitHub/arcolinux-spices/usr/share/arcolinux-spices/scripts/
-./get-the-keys-and-repos.sh
+sudo ./get-the-keys-and-repos.sh
 sudo pacman -Sy
 
 cd ~/
@@ -96,15 +96,14 @@ git
 gpick
 grub-customizer
 gtop
-libxinerama
+# libxinerama
 linux-headers
-lxdm-gtk3
+# lxdm-gtk3
 neovim
 neofetch
 nitrogen
 openssh
 partitionmanager
-polkit-gnome
 polybar
 rofi
 sxhkd
@@ -123,23 +122,7 @@ zsh-autosuggestions
 ###############
 #### Sound ####
 ###############
-alsa-plugins
-alsa-tools
-alsa-utils
-pamixer
 pavucontrol
-portaudio
-pipewire
-wireplumber
-pipewire-alsa
-pipewire-jack
-pipewire-zeroconf
-pipewire-pulse
-gstreamer
-gst-plugins-good
-gst-plugins-bad
-gst-plugins-base
-gst-plugins-ugly
 playerctl
 volumeicon
 
@@ -153,7 +136,6 @@ gvfs-nfs
 ncdu
 ntfs-3g
 ranger
-ueberzug
 xdg-user-dirs
 
 ################
@@ -168,10 +150,6 @@ viewnior
 ffmpeg
 ffmpegthumbnailer
 mpv
-obs-studio
-thunar-archive-plugin
-thunar-volman
-thunar-media-tags-plugin
 tumbler
 youtube-dl
 
@@ -179,13 +157,13 @@ youtube-dl
 ####################
 #### ARCHIVE    ####
 ####################
-file-roller
-gzip
-p7zip
-sharutils
-ufw
-unrar
-unzip
+# file-roller
+# gzip
+# p7zip
+# sharutils
+# ufw
+# unrar
+# unzip
 
 
 ####################
@@ -199,7 +177,7 @@ lib32-vulkan-radeon
 ####################
 #### Utilities  ####
 ####################
-balena-etcher
+echer-bin
 glow
 grub-btrfs
 grub-customizer
@@ -295,8 +273,7 @@ func_category AUR
 list=(
 archlinux-tweak-tool-git 
 bsp-layout
-cava
-devour
+# cava
 github-desktop-bin
 glow
 input-remapper-git
@@ -308,8 +285,7 @@ picom-animations-git
 spicetify-cli
 spotify
 spotifywm-git
-stalonetray
-tauon-music-box
+# stalonetray
 timeshift
 timeshift-autosnap
 tiny-media-manager
@@ -368,5 +344,5 @@ fi
 
 
 
-cp -r ~/GitHub/ArchInstall/config/* ~/.config
-cp -r ~/GitHub/ArchInstall/local/* ~/.local
+#cp -r ~/GitHub/ArchInstall/config/* ~/.config
+#cp -r ~/GitHub/ArchInstall/local/* ~/.local
