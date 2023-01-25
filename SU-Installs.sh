@@ -160,55 +160,55 @@ cat /etc/polkit-1/rules.d/49-nopasswd_global.rules
 # -------------------------------------------------------------------------
 # "
 
-# sleep 2
+sleep 2
 
 
 
 
-#     echo -ne "
-#     -------------------------------------------------------------------------
-#     Enable and Start Libvirt
-#     -------------------------------------------------------------------------
-#     "
-#     sudo systemctl enable libvirtd.service
-#     sleep 2
-#     sudo systemctl start libvirtd.service
-#     sleep 2
+    echo -ne "
+    -------------------------------------------------------------------------
+    Enable and Start Libvirt
+    -------------------------------------------------------------------------
+    "
+    sudo systemctl enable libvirtd.service
+    sleep 2
+    sudo systemctl start libvirtd.service
+    sleep 2
 
-#     echo -ne "
-#     -------------------------------------------------------------------------
-#     Set default network, autostartm, check status
-#     -------------------------------------------------------------------------
-#     "
+    echo -ne "
+    -------------------------------------------------------------------------
+    Set default network, autostartm, check status
+    -------------------------------------------------------------------------
+    "
     
-#     sudo virsh net-start default
-#     sleep 2
-#     sudo virsh net-autostart default
-#     sleep 2
+    sudo virsh net-start default
+    sleep 2
+    sudo virsh net-autostart default
+    sleep 2
 
-#      echo -ne "
-#     -------------------------------------------------------------------------
-#     Add user and new group
-#     -------------------------------------------------------------------------
-#     "   
+     echo -ne "
+    -------------------------------------------------------------------------
+    Add user and new group
+    -------------------------------------------------------------------------
+    "   
     
-#         sudo usermod -a -G libvirt $(whoami)
-#     sleep 2
-#     newgrp libvirt
-#     sleep 2
+        sudo usermod -a -G libvirt $(whoami)
+    sleep 2
+    newgrp libvirt
+    sleep 2
     
-#     echo -ne "
-#     -------------------------------------------------------------------------
-#     Restart Libvirt and set default network
-#     -------------------------------------------------------------------------
-#     "
+    echo -ne "
+    -------------------------------------------------------------------------
+    Restart Libvirt and set default network
+    -------------------------------------------------------------------------
+    "
 
     
-#     sudo systemctl restart libvirtd.service
-#     sleep 2
+    sudo systemctl restart libvirtd.service
+    sleep 2
 
-#     echo -ne "
-#     -------------------------------------------------------------------------
-#     Virt-Manager Setup has been setup
-#     -------------------------------------------------------------------------
-#     "
+    echo -ne "
+    -------------------------------------------------------------------------
+    Virt-Manager Setup has been setup
+    -------------------------------------------------------------------------
+    "
