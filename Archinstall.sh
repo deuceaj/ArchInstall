@@ -87,11 +87,13 @@ base-developer
 bspwm
 btop
 btrfs-progs
+ckb-next
 corectrl
 dunst
 discord
 firefox-developer-edition
 flameshot
+foliate
 git
 gpick
 grub-customizer
