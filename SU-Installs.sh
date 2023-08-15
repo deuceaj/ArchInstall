@@ -26,7 +26,7 @@ cat <<EOT >> /etc/fstab
 
 #Mount Normal Drives
 
-UUID=bd7b8781-f98f-45e3-8e5e-fee3d9fd8bbd   /media/Epsilon   btrfs   nofail                                                                       0 0 
+UUID=7290AC5850DD74BE                       /media/Epsilon   ntfs    nofail                                                                       0 0 
 UUID=b1121d57-4180-4ad1-af4f-158af3b18883   /media/Gamma     btrfs   nofail                                                                       0 0 
 //192.168.2.11/Delta/                       /media/Delta     cifs    vers=2.0,credentials=/home/deuce/.local/.smbcredentials,iocharset=utf8,gid=1000,uid=1000,file_mode=0777,dir_mode=0777   0 0
 //192.168.2.11/Theta                        /media/Theta/    cifs    vers=2.0,credentials=/home/deuce/.local/.smbcredentials,iocharset=utf8,gid=1000,uid=1000,file_mode=0777,dir_mode=0777   0 0

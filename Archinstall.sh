@@ -137,6 +137,7 @@ list=(
 
 	#My core
 	archlinux-logout-git
+	bat
 	btop
 	btrfs-progs
 	ckb-next
