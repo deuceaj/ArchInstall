@@ -80,134 +80,171 @@ func_category() {
 func_category Test
 
 list=(
-sx
-alacritty
-archlinux-logout-git
-base-developer
-bspwm
-btop
-btrfs-progs
-ckb-next
-corectrl
-dunst
-discord
-firefox-developer-edition
-flameshot
-foliate
-git
-gpick
-grub-customizer
-gtop
-# libxinerama
-linux-headers
-# lxdm-gtk3
-nemo
-neovim
-neofetch
-nitrogen
-openssh
-partitionmanager
-polybar
-rofi
-sxhkd
-unzip
-visual-studio-code-bin
-xdo
-xdg-utils
-xf86-video-amdgpu
-xfce4-power-manager
-xorg-server
-xorg-xinit
-yay-bin
-zsh
-zsh-autosuggestions
 
-###############
-#### Sound ####
-###############
-pavucontrol
-playerctl
-volumeicon
+#Prep Stage
+	qt5-wayland 
+    qt5ct
+    qt6-wayland 
+    qt6ct
+    qt5-svg
+    qt5-quickcontrols2
+    qt5-graphicaleffects
+    gtk3 
+    polkit-gnome 
+    pipewire 
+    wireplumber 
+    jq 
+    wl-clipboard 
+    cliphist 
+    python-requests 
+    pacman-contrib
 
-###############
-#### Files ####
-###############
-baobab
-gvfs
-gvfs-smb
-gvfs-nfs
-ncdu
-ntfs-3g
-ranger
-xdg-user-dirs
+#HyprV install
 
-################
-#### Images ####
-################
-imagemagick
-viewnior
-
-####################
-#### Multimedia ####
-####################
-ffmpeg
-ffmpegthumbnailer
-mpv
-tumbler
-youtube-dl
+	kitty 
+    mako 
+    waybar
+    swww 
+    swaylock-effects 
+    wofi
+	rofi
+    wlogout 
+    xdg-desktop-portal-hyprland 
+    swappy 
+    grim 
+    slurp     
+    btop
+    brave-bin
+    nemo
+    mpv
+    pamixer 
+    pavucontrol 
+    bluez 
+    bluez-utils 
+    blueman 
+    network-manager-applet 
+    gvfs 
+    file-roller
+    starship 
+    papirus-icon-theme 
+    ttf-jetbrains-mono-nerd 
+    noto-fonts-emoji 
+    lxappearance 
+    xfce4-settings
+    nwg-look-bin
+    sddm
 
 
-####################
-#### ARCHIVE    ####
-####################
-# file-roller
-# gzip
-# p7zip
-# sharutils
-# ufw
-# unrar
-# unzip
+	#My core
+	archlinux-logout-git
+	btop
+	btrfs-progs
+	ckb-next
+	corectrl
+	discord
+	foliate
+	git
+	grub-customizer
+	nemo
+	neovim
+	neofetch
+	openssh
+	partitionmanager
+	unzip
+	visual-studio-code-bin
+	xdo
+	xdg-utils
+	xf86-video-amdgpu
+	xfce4-power-manager
+	xorg-server
+	xorg-xinit
+	zsh
+	zsh-autosuggestions
+
+	###############
+	#### Sound ####
+	###############
+	# pavucontrol
+	# playerctl
+	# volumeicon
+
+	###############
+	#### Files ####
+	###############
+	baobab
+	gvfs
+	gvfs-smb
+	gvfs-nfs
+	ncdu
+	ntfs-3g
+	ranger
+	xdg-user-dirs
+
+	################
+	#### Images ####
+	################
+	imagemagick
+	viewnior
+
+	####################
+	#### Multimedia ####
+	####################
+	ffmpeg
+	ffmpegthumbnailer
+	mpv
+	tumbler
+	youtube-dl
 
 
-####################
-#### Gaming     ####
-####################
-steam
-proton-ge-custom-bin 
-lib32-vulkan-radeon
+	####################
+	#### ARCHIVE    ####
+	####################
+	# file-roller
+	# gzip
+	# p7zip
+	# sharutils
+	# ufw
+	# unrar
+	# unzip
 
 
-####################
-#### Utilities  ####
-####################
-echer-bin
-glow
-grub-btrfs
-grub-customizer
-krdc
-ninja
-libvncserver
-okular
-obsidian
-partitionmanager
-wmname
+	####################
+	#### Gaming     ####
+	####################
+	steam
+	proton-ge-custom-bin 
+	lib32-vulkan-radeon
 
-####################
-#### VirtMan    ####
-####################
-bridge-utils
-dmidecode
-dnsmasq
-edk2-ovmf
-iptables-nft
-libguestfs
-libvirt
-qemu-desktop
-qemu-full
-swtpm
-vde2
-virt-manager
-virt-viewer
+
+	####################
+	#### Utilities  ####
+	####################
+	# echer-bin
+	glow
+	grub-btrfs
+	grub-customizer
+	# ninja
+	# libvncserver
+	okular
+	obsidian
+	partitionmanager
+
+	####################
+	#### VirtMan    ####
+	####################
+	bridge-utils
+	dmidecode
+	dnsmasq
+	edk2-ovmf
+	iptables-nft
+	libguestfs
+	libvirt
+	qemu-desktop
+	qemu-full
+	swtpm
+	vde2
+	virt-manager
+	virt-viewer
 
  
 )
@@ -275,27 +312,19 @@ func_category AUR
 
 list=(
 archlinux-tweak-tool-git 
-bsp-layout
-# cava
-github-desktop-bin
-glow
 input-remapper-git
 ocs-url
-openrazer-meta
 pamac-aur
 pcloud-drive
-picom-animations-git
 spicetify-cli
 spotify
 spotifywm-git
-# stalonetray
 timeshift
 timeshift-autosnap
-tiny-media-manager
 ttf-ms-fonts
-xdg-ninja 
-xqp
-zscroll-git
+# xdg-ninja 
+# xqp
+# # zscroll-git
 # exo-devel 
 # libxfce4util-devel 
 # libxfce4ui-devel 
