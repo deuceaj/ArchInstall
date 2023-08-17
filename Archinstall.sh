@@ -44,7 +44,7 @@ echo -ne "
 ██╔═══╝ ██╔══██║██║     ██║╚██╔╝██║██╔══██║██║╚██╗██║╚════╝██╔═══╝ ██╔═██╗ ██║   ██║
 ██║     ██║  ██║╚██████╗██║ ╚═╝ ██║██║  ██║██║ ╚████║      ██║     ██║  ██╗╚██████╔╝
 ╚═╝     ╚═╝  ╚═╝ ╚═════╝╚═╝     ╚═╝╚═╝  ╚═╝╚═╝  ╚═══╝      ╚═╝     ╚═╝  ╚═╝ ╚═════╝ 
-
+nn
 -------------------------------------------------------------------------
 "
 sleep 2
@@ -99,7 +99,7 @@ list=(
     python-requests 
     pacman-contrib
 
-#HyprV install
+#My core apps
 
 	kitty 
     mako 
@@ -117,7 +117,7 @@ list=(
     brave-bin
     nemo
     mpv
-    pamixer 
+    # pamixer 
     pavucontrol 
     bluez 
     bluez-utils 
@@ -134,31 +134,29 @@ list=(
     nwg-look-bin
     sddm
 
-
-	#My core
 	archlinux-logout-git
 	bat
 	btop
 	btrfs-progs
+	cifs-utils
 	ckb-next
 	corectrl
 	discord
 	foliate
 	git
 	grub-customizer
-	nemo
 	neovim
 	neofetch
 	openssh
 	partitionmanager
 	unzip
 	visual-studio-code-bin
-	xdo
+	# xdo
 	xdg-utils
-	xf86-video-amdgpu
-	xfce4-power-manager
-	xorg-server
-	xorg-xinit
+	# xf86-video-amdgpu
+	# xfce4-power-manager
+	# xorg-server
+	# xorg-xinit
 	zsh
 	zsh-autosuggestions
 
@@ -179,7 +177,7 @@ list=(
 	ncdu
 	ntfs-3g
 	ranger
-	xdg-user-dirs
+	# xdg-user-dirs
 
 	################
 	#### Images ####
@@ -221,7 +219,7 @@ list=(
 	#### Utilities  ####
 	####################
 	# echer-bin
-	glow
+	# glow
 	grub-btrfs
 	grub-customizer
 	# ninja
@@ -233,19 +231,19 @@ list=(
 	####################
 	#### VirtMan    ####
 	####################
-	bridge-utils
-	dmidecode
-	dnsmasq
-	edk2-ovmf
-	iptables-nft
-	libguestfs
-	libvirt
-	qemu-desktop
-	qemu-full
-	swtpm
-	vde2
-	virt-manager
-	virt-viewer
+	# bridge-utils
+	# dmidecode
+	# dnsmasq
+	# edk2-ovmf
+	# iptables-nft
+	# libguestfs
+	# libvirt
+	# qemu-desktop
+	# qemu-full
+	# swtpm
+	# vde2
+	# virt-manager
+	# virt-viewer
 
  
 )
@@ -342,40 +340,40 @@ done
 #########
 
 
-echo -ne "
--------------------------------------------------------------------------
-██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗         
-██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║         
-██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║         
-██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║         
-██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗    
-╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝    
+# echo -ne "
+# -------------------------------------------------------------------------
+# ██╗███╗   ██╗███████╗████████╗ █████╗ ██╗     ██╗         
+# ██║████╗  ██║██╔════╝╚══██╔══╝██╔══██╗██║     ██║         
+# ██║██╔██╗ ██║███████╗   ██║   ███████║██║     ██║         
+# ██║██║╚██╗██║╚════██║   ██║   ██╔══██║██║     ██║         
+# ██║██║ ╚████║███████║   ██║   ██║  ██║███████╗███████╗    
+# ╚═╝╚═╝  ╚═══╝╚══════╝   ╚═╝   ╚═╝  ╚═╝╚══════╝╚══════╝    
                                                           
- ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ ███████╗   
-██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ ██╔════╝   
-██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗███████╗   
-██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║╚════██║   
-╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝███████║   
- ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ ╚══════╝   
+#  ██████╗ ██████╗ ███╗   ██╗███████╗██╗ ██████╗ ███████╗   
+# ██╔════╝██╔═══██╗████╗  ██║██╔════╝██║██╔════╝ ██╔════╝   
+# ██║     ██║   ██║██╔██╗ ██║█████╗  ██║██║  ███╗███████╗   
+# ██║     ██║   ██║██║╚██╗██║██╔══╝  ██║██║   ██║╚════██║   
+# ╚██████╗╚██████╔╝██║ ╚████║██║     ██║╚██████╔╝███████║   
+#  ╚═════╝ ╚═════╝ ╚═╝  ╚═══╝╚═╝     ╚═╝ ╚═════╝ ╚══════╝   
                                                                                                                                        
--------------------------------------------------------------------------
-"
+# -------------------------------------------------------------------------
+# "
 
-sleep 2
+# sleep 2
 
-if [[ ! -e ~/.config ]]; then
-    mkdir ~/.config
-elif [[ ! -d ~/.config ]]; then
-    echo ".config already exists but is not a directory" 1>&2
-fi
+# if [[ ! -e ~/.config ]]; then
+#     mkdir ~/.config
+# elif [[ ! -d ~/.config ]]; then
+#     echo ".config already exists but is not a directory" 1>&2
+# fi
 
-if [[ ! -e ~/.local ]]; then
-    mkdir ~/.local
-elif [[ ! -d ~/.local ]]; then
-    echo ".local already exists but is not a directory" 1>&2
-fi
+# if [[ ! -e ~/.local ]]; then
+#     mkdir ~/.local
+# elif [[ ! -d ~/.local ]]; then
+#     echo ".local already exists but is not a directory" 1>&2
+# fi
 
 
 
-#cp -r ~/GitHub/ArchInstall/config/* ~/.config
-#cp -r ~/GitHub/ArchInstall/local/* ~/.local
+# #cp -r ~/GitHub/ArchInstall/config/* ~/.config
+# #cp -r ~/GitHub/ArchInstall/local/* ~/.local
