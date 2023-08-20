@@ -81,103 +81,62 @@ func_category Test
 
 list=(
 
-#Prep Stage
-	qt5-wayland 
-    qt5ct
-    qt6-wayland 
-    qt6ct
-    qt5-svg
-    qt5-quickcontrols2
-    qt5-graphicaleffects
-    gtk3 
-    polkit-gnome 
-    pipewire 
-    wireplumber 
-    jq 
-    wl-clipboard 
-    cliphist 
-    python-requests 
-    pacman-contrib
-
-#My core apps
-
-	kitty 
-    mako 
-    waybar
-    swww 
-    swaylock-effects 
-    wofi
-	rofi
-    wlogout 
-    xdg-desktop-portal-hyprland 
-    swappy 
-    grim 
-    slurp     
-    btop
-    brave-bin
-    nemo
-    mpv
-    # pamixer 
-    pavucontrol 
-    bluez 
-    bluez-utils 
-    blueman 
-    network-manager-applet 
-    gvfs 
-    file-roller
-    starship 
-    papirus-icon-theme 
-    ttf-jetbrains-mono-nerd 
-    noto-fonts-emoji 
-    lxappearance 
-    xfce4-settings
-    nwg-look-bin
-    sddm
-
-	archlinux-logout-git
 	bat
+	brave-bin
 	btop
-	btrfs-progs
-	cifs-utils
 	ckb-next
-	corectrl
+	cliphist 
+	corectrl    
 	discord
-	foliate
+	dunst
 	git
-	grub-customizer
+	gnome-keyring 
+	grim
+	gtk3
+	hyprpaper
+	lxappearance
 	neovim
 	neofetch
-	openssh
-	partitionmanager
-	unzip
+	nordvpn-bin 
+	nordtray-bin
+	pacman-contrib
+	polkit-gnome
+	qt5-wayland 
+	qt5ct
+	qt6-wayland 
+	qt6ct
+	qt5-svg
+	qt5-quickcontrols2
+	qt5-graphicaleffects
+	slurp
+	starships
+	swappy
 	visual-studio-code-bin
-	# xdo
-	xdg-utils
-	# xf86-video-amdgpu
-	# xfce4-power-manager
-	# xorg-server
-	# xorg-xinit
+	# waybar-hyprland-git
+	wl-clipboard 
 	zsh
 	zsh-autosuggestions
+	papirus-icon-theme 
+	ttf-jetbrains-mono-nerd 
+	noto-fonts-emoji 
+		
 
 	###############
 	#### Sound ####
 	###############
-	# pavucontrol
-	# playerctl
-	# volumeicon
+	
+	##Handled through Arcolinux Tweak Tool
 
 	###############
 	#### Files ####
 	###############
 	baobab
-	gvfs
-	gvfs-smb
-	gvfs-nfs
+	cifs-utils
 	ncdu
 	ntfs-3g
 	ranger
-	# xdg-user-dirs
+	ueberzug
+	xdg-user-dirs
 
 	################
 	#### Images ####
@@ -191,20 +150,20 @@ list=(
 	ffmpeg
 	ffmpegthumbnailer
 	mpv
-	tumbler
+	obs-studio
 	youtube-dl
 
 
 	####################
 	#### ARCHIVE    ####
 	####################
-	# file-roller
-	# gzip
-	# p7zip
-	# sharutils
-	# ufw
-	# unrar
-	# unzip
+	file-roller
+	gzip
+	p7zip
+	sharutils
+	ufw
+	unrar
+	unzip
 
 
 	####################
@@ -218,19 +177,18 @@ list=(
 	####################
 	#### Utilities  ####
 	####################
-	# echer-bin
-	# glow
+	balena-etcher
+	foliate
 	grub-btrfs
 	grub-customizer
-	# ninja
-	# libvncserver
 	okular
 	obsidian
 	partitionmanager
 
-	####################
-	#### VirtMan    ####
-	####################
+
+	# ####################
+	# #### Utilities  ####
+	# ####################
 	# bridge-utils
 	# dmidecode
 	# dnsmasq
@@ -245,6 +203,8 @@ list=(
 	# virt-manager
 	# virt-viewer
 
+ 
+  
  
 )
 
