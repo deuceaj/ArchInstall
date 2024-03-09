@@ -1,5 +1,26 @@
 #!/usr/bin/env bash
 
+
+
+# Function to install yay
+install_yay() {
+    log "Installing yay"
+    if ! command -v yay &>/dev/null; then
+        # Clone yay from AUR to user's home directory
+        git clone https://aur.archlinux.org/yay.git ~/yay
+        cd ~/yay || exit
+        # Build and install yay
+        makepkg -si --noconfirm
+        cd - || exit
+        rm -rf ~/yay  # Remove the cloned repository after installation
+        log "yay installed successfully"
+    else
+        log "yay is already installed"
+    fi
+}
+
+
+
 echo -ne "
 -------------------------------------------------------------------------
 
