@@ -81,114 +81,152 @@ func_category Test
 
 list=(
 
-	bat
-	brave-bin
-	btop
-	ckb-next
-	cliphist 
-	corectrl    
-	discord
-	dunst
-	git
-	gnome-keyring 
-	grim
-	gtk3
-	hyprpaper
-	lxappearance
-	neovim
-	neofetch
-	nordvpn-bin 
-	nordtray-bin
-	pacman-contrib
+
+### Hyprland Basics
+	hyprland
 	polkit-gnome
-	qt5-wayland 
-	qt5ct
-	qt6-wayland 
-	qt6ct
-	qt5-svg
-	qt5-quickcontrols2
-	qt5-graphicaleffects
-	slurp
-	starships
-	swappy
-	visual-studio-code-bin
-	# waybar-hyprland-git
-	wl-clipboard 
-	zsh
-	zsh-autosuggestions
-	papirus-icon-theme 
-	ttf-jetbrains-mono-nerd 
-	noto-fonts-emoji 
+	ffmpeg
+	neovim
+	viewnior
+	rofi
+	pavucontrol
+	thunar
+	starship
+	wl-clipboard
+	wf-recorder
+	swaybg
+	grimblast-git
+	ffmpegthumbnailer
+	tumbler
+	playerctl
+	noise-suppression-for-voice
+	thunar-archive-plugin
+	kitty
+	wlogout
+	sddm-git
+	pamixer
+	nwg-look-bin
+	papirus-icon-theme
+	dunst
+	ttf-nerd-fonts-symbols-common
+	otf-firamono-nerd
+	inter-font
+	ttf-fantasque-nerd
+	noto-fonts
+	noto-fonts-emoji
+	ttf-jetbrains-mono-nerd
+	ttf-icomoon-feather
+	ttf-iosevka-nerd
+	adobe-source-code-pro-fonts
+	brightnessctl
+	hyprpicker-git
+
+	# bat
+	# brave-bin
+	# btop
+	# ckb-next
+	# cliphist 
+	# corectrl    
+	# discord
+	# dunst
+	# git
+	# gnome-keyring 
+	# grim
+	# gtk3
+	# hyprpaper
+	# lxappearance
+	# neovim
+	# neofetch
+	# nordvpn-bin 
+	# nordtray-bin
+	# pacman-contrib	
+	# qt5-wayland 
+	# qt5ct
+	# qt6-wayland 
+	# qt6ct
+	# qt5-svg
+	# qt5-quickcontrols2
+	# qt5-graphicaleffects
+	# slurp
+	# starships
+	# swappy
+	# visual-studio-code-bin
+	# wl-clipboard 
+	# zsh
+	# zsh-autosuggestions
+	# papirus-icon-theme 
+	# ttf-jetbrains-mono-nerd 
+	# noto-fonts-emoji 
 		
 
-	###############
-	#### Sound ####
-	###############
+	# ###############
+	# #### Sound ####
+	# ###############
 	
-	##Handled through Arcolinux Tweak Tool
-
-	###############
-	#### Files ####
-	###############
-	baobab
-	cifs-utils
-	ncdu
-	ntfs-3g
-	ranger
-	ueberzug
-	xdg-user-dirs
-
-	################
-	#### Images ####
-	################
-	imagemagick
-	viewnior
-
-	####################
-	#### Multimedia ####
-	####################
-	ffmpeg
-	ffmpegthumbnailer
-	mpv
-	obs-studio
-	youtube-dl
 
 
-	####################
-	#### ARCHIVE    ####
-	####################
-	file-roller
-	gzip
-	p7zip
-	sharutils
-	ufw
-	unrar
-	unzip
+	# ###############
+	# #### Files ####
+	# ###############
+	# baobab
+	# cifs-utils
+	# ncdu
+	# ntfs-3g
+	# ranger
+	# ueberzug
+	# xdg-user-dirs
+
+	# ################
+	# #### Images ####
+	# ################
+	# imagemagick
+	# viewnior
+
+	# ####################
+	# #### Multimedia ####
+	# ####################
+	# ffmpeg
+	# ffmpegthumbnailer
+	# mpv
+	# obs-studio
+	# youtube-dl
 
 
-	####################
-	#### Gaming     ####
-	####################
-	steam
-	proton-ge-custom-bin 
-	lib32-vulkan-radeon
+	# ####################
+	# #### ARCHIVE    ####
+	# ####################
+	# file-roller
+	# gzip
+	# p7zip
+	# sharutils
+	# ufw
+	# unrar
+	# unzip
 
 
-	####################
-	#### Utilities  ####
-	####################
-	balena-etcher
-	foliate
-	grub-btrfs
-	grub-customizer
-	okular
-	obsidian
-	partitionmanager
+	# ####################
+	# #### Gaming     ####
+	# ####################
+	# steam
+	# proton-ge-custom-bin 
+	# lib32-vulkan-radeon
 
 
 	# ####################
 	# #### Utilities  ####
 	# ####################
+	# balena-etcher
+	# foliate
+	# grub-btrfs
+	# grub-customizer
+	# okular
+	# obsidian
+	# partitionmanager
+
+
+	# # ####################
+	# # #### Utilities  ####
+	# # ####################
 	# bridge-utils
 	# dmidecode
 	# dnsmasq
@@ -271,6 +309,7 @@ func_category AUR
 
 list=(
 archlinux-tweak-tool-git 
+brave-bin
 input-remapper-git
 ocs-url
 pamac-aur
@@ -281,6 +320,8 @@ spotifywm-git
 timeshift
 timeshift-autosnap
 ttf-ms-fonts
+otf-sora
+ttf-comfortaa
 # xdg-ninja 
 # xqp
 # # zscroll-git
@@ -319,21 +360,3 @@ done
 # -------------------------------------------------------------------------
 # "
 
-# sleep 2
-
-# if [[ ! -e ~/.config ]]; then
-#     mkdir ~/.config
-# elif [[ ! -d ~/.config ]]; then
-#     echo ".config already exists but is not a directory" 1>&2
-# fi
-
-# if [[ ! -e ~/.local ]]; then
-#     mkdir ~/.local
-# elif [[ ! -d ~/.local ]]; then
-#     echo ".local already exists but is not a directory" 1>&2
-# fi
-
-
-
-# #cp -r ~/GitHub/ArchInstall/config/* ~/.config
-# #cp -r ~/GitHub/ArchInstall/local/* ~/.local
