@@ -2,25 +2,6 @@
 
 
 
-# Function to install yay
-install_yay() {
-    log "Installing yay"
-    if ! command -v yay &>/dev/null; then
-        # Clone yay from AUR to user's home directory
-        git clone https://aur.archlinux.org/yay.git ~/yay
-        cd ~/yay || exit
-        # Build and install yay
-        makepkg -si --noconfirm
-        cd - || exit
-        rm -rf ~/yay  # Remove the cloned repository after installation
-        log "yay installed successfully"
-    else
-        log "yay is already installed"
-    fi
-}
-
-
-
 echo -ne "
 -------------------------------------------------------------------------
 
@@ -40,14 +21,13 @@ echo -ne "
 
 -------------------------------------------------------------------------
 "
-sleep 2                                                                               
-mkdir ~/GitHub
+#mkdir ~/GitHub
 
-cd ~/GitHub
-git clone https://github.com/arcolinux/arcolinux-spices
-cd ~/GitHub/arcolinux-spices/usr/share/arcolinux-spices/scripts/
-sudo ./get-the-keys-and-repos.sh
-sudo pacman -Sy
+#cd ~/GitHub
+#git clone https://github.com/arcolinux/arcolinux-spices
+#cd ~/GitHub/arcolinux-spices/usr/share/arcolinux-spices/scripts/
+#sudo ./get-the-keys-and-repos.sh
+#sudo pacman -Sy
 
 cd ~/
 echo -ne "
@@ -116,15 +96,12 @@ list=(
 	wl-clipboard
 	wf-recorder
 	swaybg
-	grimblast-git
 	ffmpegthumbnailer
 	tumbler
 	playerctl
 	noise-suppression-for-voice
 	thunar-archive-plugin
-	kitty
 	wlogout
-	sddm-git
 	pamixer
 	nwg-look-bin
 	papirus-icon-theme
@@ -142,42 +119,40 @@ list=(
 	brightnessctl
 	hyprpicker-git
 
-	# bat
-	# brave-bin
-	# btop
-	# ckb-next
-	# cliphist 
-	# corectrl    
-	# discord
-	# dunst
-	# git
+	 bat
+	 brave-bin
+	 btop
+	 ckb-next
+	 cliphist 
+	 corectrl    
+	 discord
+	 dunst
+	 git
 	# gnome-keyring 
 	# grim
-	# gtk3
+	 gtk3
+	 gvfs-mtp
 	# hyprpaper
 	# lxappearance
-	# neovim
-	# neofetch
-	# nordvpn-bin 
-	# nordtray-bin
-	# pacman-contrib	
-	# qt5-wayland 
-	# qt5ct
-	# qt6-wayland 
-	# qt6ct
-	# qt5-svg
-	# qt5-quickcontrols2
-	# qt5-graphicaleffects
-	# slurp
-	# starships
-	# swappy
-	# visual-studio-code-bin
-	# wl-clipboard 
-	# zsh
-	# zsh-autosuggestions
-	# papirus-icon-theme 
-	# ttf-jetbrains-mono-nerd 
-	# noto-fonts-emoji 
+	 neovim
+	 neofetch	
+	 pacman-contrib	
+	 qt5-wayland 
+	 qt5ct
+	 qt6-wayland 
+	 qt6ct
+	 qt5-svg
+	 qt5-quickcontrols2
+	 qt5-graphicaleffects
+	 slurp
+	 starships
+	 swappy
+	 wl-clipboard 
+	 zsh
+	 zsh-autosuggestions
+	 papirus-icon-theme 
+	 ttf-jetbrains-mono-nerd 
+	 noto-fonts-emoji 
 		
 
 	# ###############
@@ -189,28 +164,28 @@ list=(
 	# ###############
 	# #### Files ####
 	# ###############
-	# baobab
-	# cifs-utils
-	# ncdu
-	# ntfs-3g
+	 baobab
+	 cifs-utils
+	 ncdu
+	 ntfs-3g
 	# ranger
-	# ueberzug
-	# xdg-user-dirs
+	 ueberzug
+	 xdg-user-dirs
 
 	# ################
 	# #### Images ####
 	# ################
-	# imagemagick
-	# viewnior
+	 imagemagick
+	 viewnior
 
 	# ####################
 	# #### Multimedia ####
 	# ####################
-	# ffmpeg
-	# ffmpegthumbnailer
-	# mpv
-	# obs-studio
-	# youtube-dl
+	 ffmpeg
+	 ffmpegthumbnailer
+	 mpv
+	 obs-studio
+	 youtube-dl
 
 
 	# ####################
@@ -237,30 +212,30 @@ list=(
 	# #### Utilities  ####
 	# ####################
 	# balena-etcher
-	# foliate
+	 foliate
+	 evince
 	# grub-btrfs
-	# grub-customizer
-	# okular
-	# obsidian
-	# partitionmanager
+	# grub-customizer	 
+	 obsidian
+	
 
 
 	# # ####################
 	# # #### Utilities  ####
 	# # ####################
-	# bridge-utils
-	# dmidecode
-	# dnsmasq
-	# edk2-ovmf
-	# iptables-nft
-	# libguestfs
-	# libvirt
-	# qemu-desktop
-	# qemu-full
-	# swtpm
-	# vde2
-	# virt-manager
-	# virt-viewer
+	bridge-utils
+	dmidecode
+	dnsmasq
+	edk2-ovmf
+	iptables-nft
+	libguestfs
+	libvirt
+	qemu-desktop
+	qemu-full
+	swtpm
+	vde2
+	virt-manager
+	virt-viewer
 
  
   
@@ -332,6 +307,9 @@ list=(
 archlinux-tweak-tool-git 
 brave-bin
 input-remapper-git
+nordvpn-bin 
+nordtray-bin
+nordpass-bin
 ocs-url
 pamac-aur
 pcloud-drive
@@ -343,6 +321,7 @@ timeshift-autosnap
 ttf-ms-fonts
 otf-sora
 ttf-comfortaa
+visual-studio-code-bin
 # xdg-ninja 
 # xqp
 # # zscroll-git
@@ -350,6 +329,9 @@ ttf-comfortaa
 # libxfce4util-devel 
 # libxfce4ui-devel 
 # thunar-git
+oh-my-zsh-git
+oh-my-zsh-powerline-theme-git
+zsh-theme-powerlevel10k
 )
 
 count=0
