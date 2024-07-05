@@ -81,163 +81,122 @@ func_category() {
 func_category Test
 
 list=(
+### Must have programs
 
-
-### Hyprland Basics
-	hyprland
-	polkit-gnome
+	
+	amd-ucode
+	alacritty
+	bat
+	corectrl	
+	discord
+	baobab
+	cifs-utils
+	dunst
+	evince
 	ffmpeg
+	ffmpegthumbnailer
+	firefox
+	foliate
+	git
+	gtk-theme-elementary
+	gparted
+	gtk3	
+	guvcview
+	gvfs-mtp
+	kitty
+	mpv
 	neovim
-	viewnior
-	rofi
+	noise-suppression-for-voice
+	ntfs-3g
+	nwg-look
+	obsidian
+	obs-studio
+	pamixer
+	pacman-contrib	
+	papirus-icon-theme
 	pavucontrol
+	playerctl
+	polkit-gnome
+	qt5-wayland 
+	qt5ct
+	qt6-wayland 
+	qt6ct
+	qt5-svg
+	qt5-quickcontrols2
+	qt5-graphicaleffects
+	qalculate-gtk
+	slurp
 	thunar
-	starship
+	thunar-media-tags-plugin
+	thunar-archive-plugin
+	thunar-volman
+	tumbler
+	virt-viewer	
+	timeshift
+	torbrowser-launcer
 	wl-clipboard
 	wf-recorder
-	swaybg
-	ffmpegthumbnailer
-	tumbler
-	playerctl
-	noise-suppression-for-voice
-	thunar-archive-plugin
-	wlogout
-	pamixer
-	nwg-look-bin
-	papirus-icon-theme
-	dunst
-	ttf-nerd-fonts-symbols-common
-	otf-firamono-nerd
-	inter-font
-	ttf-fantasque-nerd
-	noto-fonts
-	noto-fonts-emoji
-	ttf-jetbrains-mono-nerd
-	ttf-icomoon-feather
-	ttf-iosevka-nerd
-	adobe-source-code-pro-fonts
-	brightnessctl
-	hyprpicker-git
-
-	 bat
-	 brave-bin
-	 btop
-	 ckb-next
-	 cliphist 
-	 corectrl    
-	 discord
-	 dunst
-	 git
-	# gnome-keyring 
-	# grim
-	 gtk3
-	 gvfs-mtp
-	# hyprpaper
-	# lxappearance
-	 neovim
-	 neofetch	
-	 pacman-contrib	
-	 qt5-wayland 
-	 qt5ct
-	 qt6-wayland 
-	 qt6ct
-	 qt5-svg
-	 qt5-quickcontrols2
-	 qt5-graphicaleffects
-	 slurp
-	 starships
-	 swappy
-	 wl-clipboard 
-	 zsh
-	 zsh-autosuggestions
-	 papirus-icon-theme 
-	 ttf-jetbrains-mono-nerd 
-	 noto-fonts-emoji 
-		
-
-	# ###############
-	# #### Sound ####
-	# ###############
+	viewnior
+	virt-manager
+	vlc
 	
-
-
-	# ###############
-	# #### Files ####
-	# ###############
-	 baobab
-	 cifs-utils
+	####################
+	####      Files ####
+	####################
 	 ncdu
-	 ntfs-3g
-	# ranger
-	 ueberzug
-	 xdg-user-dirs
+	 ranger
+	 ueberzug	 
 
-	# ################
-	# #### Images ####
-	# ################
+	################
+	#### Images ####
+	####################
 	 imagemagick
-	 viewnior
 
-	# ####################
-	# #### Multimedia ####
-	# ####################
-	 ffmpeg
-	 ffmpegthumbnailer
-	 mpv
-	 obs-studio
+	####################
+	#### Multimedia ####
+	####################
 	 youtube-dl
 
+	####################
+	#### ARCHIVE    ####
+	####################
+	file-roller
+	gzip
+	p7zip
+	sharutils
+	ufw
+	unrar
+	unzip
+	xarchiver	
 
-	# ####################
-	# #### ARCHIVE    ####
-	# ####################
-	# file-roller
-	# gzip
-	# p7zip
-	# sharutils
-	# ufw
-	# unrar
-	# unzip
-
-
-	# ####################
-	# #### Gaming     ####
-	# ####################
-	# steam
-	# proton-ge-custom-bin 
-	# lib32-vulkan-radeon
-
-
-	# ####################
-	# #### Utilities  ####
-	# ####################
-	# balena-etcher
-	 foliate
-	 evince
-	# grub-btrfs
-	# grub-customizer	 
-	 obsidian
+	####################
+	#### Gaming     ####
+	####################
+	steam
+	proton-ge-custom-bin 
+	lib32-vulkan-radeon
 	
-
-
-	# # ####################
-	# # #### Utilities  ####
-	# # ####################
+	####################
+	#### Utilities  ####
+	####################
 	bridge-utils
-	dmidecode
 	dnsmasq
 	edk2-ovmf
 	iptables-nft
 	libguestfs
 	libvirt
-	qemu-desktop
+	# qemu-desktop
 	qemu-full
 	swtpm
 	vde2
-	virt-manager
-	virt-viewer
+	
+	
 
- 
+
+
+
+
+
   
  
 )
@@ -304,34 +263,43 @@ func_category() {
 func_category AUR  
 
 list=(
-archlinux-tweak-tool-git 
-brave-bin
-input-remapper-git
-nordvpn-bin 
-nordtray-bin
-nordpass-bin
-ocs-url
-pamac-aur
-pcloud-drive
-spicetify-cli
-spotify
-spotifywm-git
-timeshift
-timeshift-autosnap
-ttf-ms-fonts
-otf-sora
-ttf-comfortaa
-visual-studio-code-bin
-# xdg-ninja 
-# xqp
-# # zscroll-git
-# exo-devel 
-# libxfce4util-devel 
-# libxfce4ui-devel 
-# thunar-git
-oh-my-zsh-git
-oh-my-zsh-powerline-theme-git
-zsh-theme-powerlevel10k
+
+
+	#aur
+	archlinux-tweak-tool-git 
+	brave-bin
+	ckb-next
+	emote
+	input-remapper-git
+	nordpass-bin
+	nordtray-bin
+	nordvpn-bin
+	ocs-url
+	pacseek
+	pamac-all
+	pcloud-drive
+	sddm-theme-sugar-candy-git
+	spicetify-cli
+	spotify
+	spotifywn-git
+	timeshift
+	timeshift-autosnap
+	Visual-studio-code-bin
+	
+	#fonts
+	ttf-ms-fonts
+	otf-sora
+	ttf-comfortaa
+	ttf-nerd-fonts-symbols-common
+	otf-firamono-nerd
+	inter-font
+	ttf-fantasque-nerd
+	noto-fonts
+	noto-fonts-emoji
+	ttf-jetbrains-mono-nerd
+	ttf-icomoon-feather
+	ttf-iosevka-nerd
+	adobe-source-code-pro-fonts	
 )
 
 count=0
